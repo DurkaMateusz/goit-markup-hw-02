@@ -107,6 +107,7 @@ button:focus {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-color, black);
+  padding-bottom: 10px;
 }
 .main .title-main {
   font-style: normal;
@@ -208,6 +209,7 @@ footer {
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
+  align-items: baseline;
 }
 
 .logo {
@@ -232,17 +234,30 @@ header {
 }
 
 .contact-phone {
-  display: block;
+  display: flex;
   order: 2;
-  padding-left: 50px;
+  padding-left: 10px;
+  align-items: baseline;
 }
 
 .contact-mail {
-  display: block;
-  padding-left: 0px;
+  display: flex;
+  padding-left: 10px;
   order: 1;
+  align-items: baseline;
 }
 
+.logo-envelope,
+.logo-smartphone {
+  display: inline-flex;
+  fill: #757575;
+  cursor: pointer;
+}
+
+.logo-envelope:hover,
+.logo-smartphone:hover {
+  fill: #2196f3;
+}
 .navigation-box {
   display: flex;
   align-items: baseline;
@@ -250,6 +265,17 @@ header {
 
 .bg_color_top_main {
   background-color: #2f303a;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(/images/backgroundimg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
 }
 
 .title-box {
@@ -283,28 +309,41 @@ header {
 }
 
 .content ul {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
 .content li {
   display: block;
-  margin: 0 30;
+  margin: 30px 0;
   width: 270px;
   height: 75px;
 }
 
 .emulated-flex-gap > * {
-  margin: 94px auto;
+  margin-bottom: 30px;
 }
 
 .emulated-flex-gap {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   margin: -12px 0 0 -12px;
   width: 100%;
   gap: 30px;
 }
+
+li > .icons-atuty {
+  display: flex;
+  padding: 25px 100px;
+  border-radius: 4px;
+  background: #f5f4fa;
+  margin-top: 94px;
+}
+
+.our_job {
+  margin-top: 94px;
+}
+
 img {
   margin: 0;
   border: 0;
@@ -323,13 +362,14 @@ img {
 
 .person {
   margin: 0;
+  padding-top: 30px;
   border-bottom: 0px;
   border-top: 0px;
   border-style: none;
 }
 
 .function {
-  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .cards {
@@ -357,8 +397,10 @@ figcaption {
 }
 
 .address {
+  margin: 0;
   padding-top: 20px;
   padding-bottom: 60px;
+  padding-right: 70px;
   list-style-type: none;
 }
 
@@ -412,6 +454,11 @@ figcaption {
   border: 1px solid #eee;
 }
 
+.portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
 .name {
   display: flex;
   padding-top: 20px;
@@ -431,4 +478,108 @@ figcaption {
 
 figure {
   margin-inline: 0px;
+}
+
+.icon-person {
+  display: block;
+  padding: 12px;
+}
+
+.icons_person {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  gap: 34px;
+}
+.icons-list {
+  display: flex;
+  align-items: baseline;
+  width: 270px;
+  justify-content: space-between;
+  padding: 28px 44px 42px;
+}
+
+.icon-person:hover {
+  border-radius: 30%;
+  background: #2196f3;
+  fill: #fff;
+}
+
+.joinus {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+
+.foot_align {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px;
+}
+
+.foot-right {
+  margin: 0;
+  padding-top: 12px;
+}
+
+.joinus-list {
+  display: flex;
+  align-items: baseline;
+  width: 206px;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.icon-joinus {
+  fill: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30%;
+  padding: 12px;
+}
+
+.icon-joinus:hover {
+  background: #2196f3;
+}
+
+.title-customers {
+  color: #212121;
+  text-align: center;
+  font-size: 36px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+.icon-customer {
+  display: flex;
+  padding: 17.71px 32px 14.25px 32px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  fill: #afb1b8;
+}
+
+.icon-customer:hover {
+  fill: #2196f3;
+  border-radius: 4px;
+  border: 1px solid #2196f3;
+}
+
+.customers_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1170px;
+  padding-bottom: 94px;
 }
